@@ -1,0 +1,538 @@
+& when (@media-common = true) {
+    /* #region common */
+
+    body {
+        line-height: 20px;
+  
+    }
+   
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        margin-right: -15px;
+        margin-left: -15px;
+        flex-wrap: wrap;
+    }
+    .col {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .style-guide-title {
+        color: @color-gray80;
+        font-family: @font-helveticalight;
+        font-weight: @font-weight__regular;
+        font-size: 30px;
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+    .style-guide-heading {
+        background-color: @color-red14;
+        padding: 68px 0 67px 0;
+        color: @color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .sg-heading-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo{
+            margin: 0;
+            .logo_img{
+                width: 210px;
+                height: 65px;
+            }
+        }
+       
+        .sg-page-name {
+            text-align: center;
+            width: 100%;
+            font-size: 30px;
+            font-family: @font-helveticalight;
+            font-weight: @font-weight__regular;
+        }
+    }
+
+    /* #endregion */
+
+    /* #region buttons */
+    input[type="number"].qty {
+        width: 40px;
+        text-align-last: center;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+    span.ipn-step-up,
+    span.ipn-step-down {
+        cursor: pointer;
+        display: inline-block;
+        width: 38px;
+        height: 38px;
+        border: 1px solid @color-gray89;
+        line-height: 38px;
+        text-align: center;
+        color: @color-gray96;
+        /* disable select text */
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none;
+        &:hover {
+            background-color: @color-white-fog;
+        }
+    }
+    span.ipn-step-up {
+        border-left: none;
+        margin-left: -4px;
+    }
+    span.ipn-step-down {
+        border-right: none;
+        margin-right: -4px;
+    }
+    .qty-block {
+        display: inline-block;
+    }
+    .sg-buttons {
+        .action.primary,
+        .action.secondary {
+            margin-right: 6px;
+            margin-bottom: 9px;
+        }
+        .action.primary.hover {
+            color: @color-white;
+            background-color: @color-black-dark1;
+        }
+        .action.secondary.hover {
+            background-color: @color-green2;
+        }
+        .sg-btn-hover span.ipn-step-up {
+            background-color: @color-white-fog;
+        }
+        .qty-block {
+            margin-bottom: 9px;
+            vertical-align: middle;
+        }
+        .sg-btn-hover input {
+            vertical-align: bottom;
+        }
+    }
+    /* #endregion */
+
+    /* #region checkbox radio */
+    input[type="checkbox"] {
+        top: 0;
+    }
+    //  CUSTOM CHECKBOX
+    /* The checkbox container */
+    .checkbox-container {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        // padding-left: @custom__checkbox__width;
+        min-height: @custom__checkbox__height;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        /* Create a custom checkbox */
+        .checkmark {
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+  
+            background-color: @color-white;
+            border: 1px solid @color-gray-darken2;
+            /* Create the checkmark/indicator */
+            &:after {
+                /* (hidden when not checked) */
+                content: "";
+                position: absolute;
+                display: none;
+                /* Style the checkmark/indicator */
+                left: 6px;
+                top: 2px;
+                width: 4px;
+                height: 9px;
+                border: solid @color-black;
+                border-width: 0 2px 2px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
+        /* On mouse-over, add a background color */
+        &:hover input[type="checkbox"] ~ .checkmark {
+            background-color: @color-white;
+        }
+        /* Hide the browser's default checkbox */
+        input[type="checkbox"] {
+            position: absolute;
+            // opacity: 0;
+            cursor: pointer;
+            // height: 0;
+            // width: 0;
+            height: @custom__checkbox__height;
+            width: @custom__checkbox__width;
+
+            /* When the checkbox is checked, add a background color*/
+            &:checked ~ .checkmark {
+                background-color: @color-white;
+                /* Show the checkmark when checked */
+                &:after {
+                    display: block;
+                }
+            }
+            /* When the checkbox is disabled, change color */
+            &:disabled ~ .checkmark {
+                background-color: @color-gray-light0;
+                &:after {
+                    border-color: @color-gray-darken2;
+                }
+            }
+        }
+        .content {
+            display: inline-block;
+            padding-left: @custom__space_content_checkbox;
+        }
+    }
+
+    //  CUSTOM RADIO
+    /* The checkbox container */
+    .radio-container {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding-left: @custom__radio__size;
+        min-height: @custom__radio__size;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        /* Create a custom radio */
+        .checkmark {
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+        
+            background-color: @color-white;
+            border: 1px solid @color-gray-darken2;
+            border-radius: 50%;
+            /* Create the checkmark/indicator */
+            &:after {
+                /* (hidden when not checked) */
+                content: "";
+                position: absolute;
+                display: none;
+                /* Style the checkmark/indicator */
+                top: 50%;
+                left: 50%;
+                width: @custom__radio__dot_size;
+                height: @custom__radio__dot_size;
+                background: @color-black;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+            }
+        }
+        /* On mouse-over, add a background color */
+        &:hover input[type="radio"] ~ .checkmark {
+            background-color: @color-white;
+        }
+        /* Hide the browser's default radio */
+        input[type="radio"] {
+            position: absolute;
+            // opacity: 0;
+            cursor: pointer;
+            // height: 0;
+            // width: 0;
+            height: @custom__radio__size;
+            width: @custom__radio__size;
+            /* When the radio is checked, add a background color*/
+            &:checked ~ .checkmark {
+                background-color: @color-white;
+                /* Show the checkmark when checked */
+                &:after {
+                    display: block;
+                }
+            }
+            /* When the radio is disabled, change color */
+            &:disabled ~ .checkmark {
+                background-color: @color-gray-light0;
+                &:after {
+                    background-color: @color-gray-darken2;
+                }
+            }
+        }
+        .content {
+            display: inline-block;
+            padding-left: @custom__space_content_radio;
+        }
+    }
+    .sg-checkbox-radio {
+        .sg-checkbox,
+        .sg-radio {
+            display: inline-block;
+            div {
+                margin-bottom: 10px;
+            }
+        }
+        .sg-checkbox {
+            margin-right: 50px;
+        }
+    }
+    /* #endregion */
+
+    /* #region input */
+
+    .sg-inputs {
+        div {
+            margin-bottom: 10px;
+            max-width: 320px;
+        }
+    }
+
+    /* #endregion */
+
+    /* #region navigation */
+
+    .sg-navigation {
+        .product.data.items {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        h3 {
+            font-family: @font-roboto;
+            font-weight: @font-weight__heavier;
+        }
+    }
+
+    /* #endregion */
+
+    /* #region alerts */
+
+    .message {
+        text-align: center;
+    }
+
+    /* #endregion */
+
+    /* #region typography */
+
+    .sg-typography h1 {
+        margin-top: 50px;
+    }
+    a.sg-link-hover {
+        color: @color-gray97;
+    }
+
+    /* #endregion */
+
+    /* #region misc */
+
+    a.icon {
+        color: @color-black-dark5;
+        &:hover {
+            color: @color-black;
+        }
+    }
+    .minicart-wrapper .action.close {
+        &::before {
+            color: @color-gray-middle6;
+        }
+        &:hover ::before {
+            color: @color-black-dark6;
+        }
+    }
+    .sg-misc {
+        a.icon {
+            margin-right: 15px;
+            &.hover {
+                color: @color-black;
+            }
+        }
+        .minicart-wrapper {
+            float: left;
+            margin-left: 0;
+            margin-right: 15px;
+            margin-top: 0;
+            .action.close,
+            .action.close.hover {
+                top: 3px;
+                right: unset;
+                left: 0;
+                height: auto;
+                width: auto;
+                &::before {
+                    line-height: normal;
+                }
+            }
+            .action.close.hover::before {
+                color: @color-black-dark6;
+            }
+        }
+        .social {
+            margin-left: 30px;
+        }
+    }
+    .sg-promo {
+        margin-top: 30px;
+    }
+    .promo-block {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 10px;
+        p {
+            margin-bottom: 0;
+        }
+        img {
+            width: 100%;
+        }
+        a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            white-space: nowrap;
+            .lib-link-as-button();
+            .lib-button(
+                @_button-font-family: @font-roboto,
+                @_button-font-weight: @font-weight__bold,
+                @_button-font-size: 15px,
+                @_button-cursor: @button__cursor,
+                @_button-display: @button__display,
+                @_button-padding: 17px 22px,
+                @_button-color: @color-white,
+                @_button-background: @color-black-dark1,
+                @_button-border: 2px solid @color-white,
+
+                @_button-color-hover: @color-white,
+                @_button-background-hover: @color-black-dark2,
+                @_button-border-hover: 2px solid @color-white,
+                @_button-color-active: @color-white,
+                @_button-background-active: @color-black-dark2,
+                @_button-border-active: 2px solid @color-white,
+            );
+        }
+    }
+    .promo-block.hover {
+        a {
+            background-color: @color-black-dark2;
+        }
+    }
+
+    /* #endregion */
+}
+
+/* #region resonsive */
+
+@media screen and (max-width: @screen__s) {
+
+    .style-guide-heading {
+     
+        .sg-page-name {
+            padding: 20px;
+        
+        }
+    }
+    .sg-buttons {
+        .action,
+        .qty-block {
+            display: block;
+        }
+    }
+    .sg-checkbox-radio .sg-radio {
+        display: block;
+    }
+ 
+}
+@media screen and (min-width: @screen__s) {
+    .style-guide {
+        .sg-promo {
+            .row {
+                flex-wrap: nowrap;
+            }
+            .col {
+                &:first-child {
+                    padding-right: 10px;
+                }
+                &:last-child {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+    .style-guide-heading {
+        .sg-heading-text {
+            flex-wrap: nowrap;
+        }
+      
+        .sg-page-name {
+ 
+            width: fit-content;
+            padding-left: 70px;
+        }
+    }
+}
+@media screen and (min-width: @screen__l) {
+    .style-guide {
+        &.row {
+            flex-wrap: nowrap;
+            .col {
+                width: 50%;
+                &:first-child {
+                    padding-right: 25px;
+                }
+                &:last-child {
+                    padding-left: 25px;
+                }
+            }
+        }
+        .sg-promo {
+            .row {
+                flex-wrap: wrap;
+            }
+            .col {
+                width: 100%;
+                &:first-child {
+                    padding-right: 15px;
+                }
+                &:last-child {
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: @screen__xl) {
+    .style-guide {
+        .sg-promo {
+            .row {
+                flex-wrap: nowrap;
+            }
+            .col {
+                width: 50%;
+                &:first-child {
+                    padding-right: 10px;
+                }
+                &:last-child {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+/* #endregion */

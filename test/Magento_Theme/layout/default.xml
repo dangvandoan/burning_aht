@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+        <!-- <move element="top.links" destination="header-wrapper" after="top.search"/> -->
+        <!-- <attribute name="class" value="my-class"/>
+        <attribute name="style" value="background-color:red"/> -->
+  
+        <!-- <referenceContainer name="main.content">
+            <container name="some.container" as="someContainer" label="Some Container" htmlTag="div" htmlClass="some-container">
+               
+                <block class="Magento\Cms\Block\Block" name="test_block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">test_block</argument>
+                    </arguments>
+                </block> 
+
+            </container>
+        </referenceContainer> -->
+
+
+       
+        <!-- <referenceContainer name="header-wrapper" remove="true"/>
+        <referenceBlock name="navigation.sections" remove="true"/>
+        <referenceBlock name="breadcrumbs" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
+
+        <referenceContainer name="footer" remove="true"/> -->
+
+        <!-- Remove welcome -->
+        <referenceBlock name="header" remove="true"/> 
+        <!-- Remove Create an Account -->
+        <referenceBlock name="register-link" remove="true" /> 
+        <!-- Remove footer links -->
+        <referenceBlock name="footer_links" remove="true"/>
+        <!-- Remove store switcher -->
+        <referenceBlock name="store_switcher" remove="true"/>
+        <!-- Remove copright -->
+        <referenceBlock name="copyright" remove="true"/>
+        <!-- * -->
+        <!-- Add Header -->
+        <!-- * -->
+
+        <referenceContainer name="header.panel">
+           <!-- <block class="Magento\Framework\View\Element\Template" name="blog" before="-"  template="Magento_Theme::blog.phtml"></block> -->
+            <block class="Magento\Framework\View\Element\Template" name="header_top" before="-"  template="Magento_Theme::header_top.phtml"></block>
+           
+        </referenceContainer>
+        <referenceContainer name="header.links">
+            <block class="Magento\Framework\View\Element\Template" name="header_top_right" before="-"  template="Magento_Theme::header_top_right.phtml"></block>
+        </referenceContainer>
+
+
+
+            
+        <!-- * -->
+        <!-- Add Fotter -->
+        <!-- * -->
+         <referenceContainer name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="footer_links_categories" before="-"  template="Magento_Theme::footer_links.phtml"></block>
+             <container name="footer_bottom" htmlTag="div" htmlClass="footer-bottom">
+                <block class="Magento\Framework\View\Element\Template" name="footer_cards" before="-"  template="Magento_Theme::footer_cards.phtml"></block>
+               
+            </container>
+        </referenceContainer>
+            
+    
+    </body>
+</page>

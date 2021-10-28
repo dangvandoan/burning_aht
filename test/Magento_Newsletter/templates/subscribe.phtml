@@ -1,0 +1,241 @@
+<?php
+
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Newsletter\Block\Subscribe $block */
+?>
+<div class="footer-top">
+
+
+    <div class="ft-links-categories">
+        <ul class="footer links">
+
+            <h3 class="title">Categories</h3>
+
+            <li class="nav item"><a href="#">Outdoor Lounges</a></li>
+            <li class="nav item"><a href="#">Outdoor Dining</a></li>
+            <li class="nav item"><a href="#">Outdoor Umbrellas &amp; Accessories</a></li>
+            <li class="nav item"><a href="#">Wood Fireplaces</a></li>
+            <li class="nav item"><a href="#">Gas Fireplaces</a></li>
+            <li class="nav item"><a href="#">Ethanol Fireplaces </a></li>
+            <li class="nav item"><a href="#">Electric Fireplaces</a></li>
+            <li class="nav item"><a href="#">Weber Charcoal BBQs</a></li>
+            <li class="nav item"><a href="#"> Weber Premium Gas BBQs</a></li>
+            <li class="nav item"><a href="#">Weber Qs </a></li>
+            <li class="nav item"><a href="#"> Weber Electric BBQs </a></li>
+            <li class="nav item"><a href="#">Clearance Store</a></li>
+
+        </ul>
+    </div>
+
+    <div class="ft-links-why">
+        <ul class="footer links ">
+            <h3 class="title">Why Burning Log?</h3>
+
+            <li class="nav item"><a href="#"> About us </a></li>
+            <li class="nav item"><a href="#"> All products </a></li>
+            <li class="nav item"><a href="#"> Catalogues</a></li>
+            <li class="nav item"><a href="#"> Contact us </a></li>
+
+        </ul>
+    </div>
+
+    <div class="ft-links-policies">
+        <h3 class="title">Our Policies</h3>
+        <ul class="footer links ">
+            <li class="nav item"><a href="#"> Terms and conditions </a></li>
+            <li class="nav item"><a href="#"> Return policy </a></li>
+            <li class="nav item"><a href="#"> Delivery and pick up policy</a></li>
+            <li class="nav item"><a href="#"> Privacy policy </a></li>
+        </ul>
+    </div>
+
+    <div class="ft-links-newsletter">
+        <ul class="footer links ">
+            <h3 class="title">Newsletter</h3>
+            <li class="nav item"><a href="#"> Subscribe to our newsletter for the latest
+                    news and updates </a></li>
+
+            <li class="nav item">
+                <div class="email">
+
+                    <div class="content">
+                        <form class="form subscribe" novalidate action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>" method="post" data-mage-init='{"validation": {"errorClass": "mage-error"}}' id="newsletter-validate-detail">
+                            <div class="field newsletter">
+
+                                <label for="newsletter">
+
+                                    <input name="email" type="email" id="newsletter" placeholder="<?= $block->escapeHtmlAttr(__('Enter your email address')) ?>" data-mage-init='{"mage/trim-input":{}}' data-validate="{required:true, 'validate-email':true}" />
+                                </label>
+                              
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="nav item">
+                <a href="#" class="icon">
+                    <span><i class="fab fa-facebook-f"></i></span>
+                </a>
+                <a href="#" class="icon">
+                    <span><i class="fab fa-instagram"></i></span>
+                </a>
+                <a href="#" class="icon">
+                    <span><i class="fab fa-twitter"></i></span>
+                </a>
+                <a href="#" class="icon">
+                    <span><i class="fab fa-youtube"></i></span>
+                </a>
+
+                <a href="#" class="icon">
+                    <span> <i class="fab fa-pinterest"></i></span>
+                </a>
+
+            </li>
+
+
+        </ul>
+    </div>
+</div>
+
+
+
+<!-- Mobile -->
+
+
+<div class="footer-top-mobile">
+
+    <div class="ft-links-newsletter">
+        <ul class="footer links ">
+            <h3 class="title">Newsletter</h3>
+            <li class="nav item"><a href="#"> Subscribe to our newsletter for the latest
+                    news and updates </a></li>
+
+            <li class="nav item">
+                <div class="email">
+
+                    <div class="content">
+                        <form class="form subscribe" novalidate action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>" method="post" data-mage-init='{"validation": {"errorClass": "mage-error"}}' id="newsletter-validate-detail">
+                            <div class="field newsletter">
+
+                                <label for="newsletter">
+
+                                    <input name="email" type="email" id="newsletter" placeholder="<?= $block->escapeHtmlAttr(__('Enter your email address')) ?>" data-mage-init='{"mage/trim-input":{}}' data-validate="{required:true, 'validate-email':true}" />
+                                </label>
+
+                               
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="nav item icon-link">
+                <a href="#" class="icon">
+                    <span><i class="fab fa-facebook-f"></i></span>
+                </a>
+                <a href="#" class="icon">
+                    <span><i class="fab fa-instagram"></i></span>
+                </a>
+                <a href="#" class="icon">
+                    <span><i class="fab fa-twitter"></i></span>
+                </a>
+                <a href="#" class="icon">
+                    <span><i class="fab fa-youtube"></i></span>
+                </a>
+
+                <a href="#" class="icon">
+                    <span> <i class="fab fa-pinterest"></i></span>
+                </a>
+
+            </li>
+        </ul>
+    </div>
+
+    <div id="accordion" data-mage-init='{
+        "accordion":{
+            "active": [0,1,2,3],
+            "collapsible": true,
+            "openedState": "active",
+            "multipleCollapsible": true
+        }}'>
+
+        <div data-role="collapsible">
+            <div class="link-title" data-role="trigger">
+                <h3 class="title">Categories</h3>
+                <div class="plus">
+                    <i class="fas fa-plus"></i>
+                </div>
+
+            </div>
+        </div>
+        <div data-role="content">
+            <ul class="footer links">
+
+                <li class="nav item"><a href="#">Outdoor Lounges</a></li>
+                <li class="nav item"><a href="#">Outdoor Dining</a></li>
+                <li class="nav item"><a href="#">Outdoor Umbrellas &amp; Accessories</a></li>
+                <li class="nav item"><a href="#">Wood Fireplaces</a></li>
+                <li class="nav item"><a href="#">Gas Fireplaces</a></li>
+                <li class="nav item"><a href="#">Ethanol Fireplaces </a></li>
+                <li class="nav item"><a href="#">Electric Fireplaces</a></li>
+                <li class="nav item"><a href="#">Weber Charcoal BBQs</a></li>
+                <li class="nav item"><a href="#"> Weber Premium Gas BBQs</a></li>
+                <li class="nav item"><a href="#">Weber Qs </a></li>
+                <li class="nav item"><a href="#"> Weber Electric BBQs </a></li>
+                <li class="nav item"><a href="#">Clearance Store</a></li>
+
+            </ul>
+        </div>
+
+        <div data-role="collapsible">
+            <div class="link-title" data-role="trigger">
+
+                <h3 class="title">Why Burning Log?</h3>
+                <div class="plus">
+                    <i class="fas fa-plus"></i>
+                </div>
+
+            </div>
+        </div>
+        <div data-role="content">
+            <ul class="footer links ">
+                <li class="nav item"><a href="#"> About us </a></li>
+                <li class="nav item"><a href="#"> All products </a></li>
+                <li class="nav item"><a href="#"> Catalogues</a></li>
+                <li class="nav item"><a href="#"> Contact us </a></li>
+
+            </ul>
+        </div>
+
+        <div data-role="collapsible">
+            <div class="link-title" data-role="trigger">
+
+                <h3 class="title">Our Policies</h3>
+                <div class="plus">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+        </div>
+        <div data-role="content">
+            <ul class="footer links ">
+                <li class="nav item"><a href="#"> Terms and conditions </a></li>
+                <li class="nav item"><a href="#"> Return policy </a></li>
+                <li class="nav item"><a href="#"> Delivery and pick up policy</a></li>
+                <li class="nav item"><a href="#"> Privacy policy </a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <head>
+        <!-- <css src="css/fontawesome.css" /> -->
+        <!-- <css src="Magento_Theme::css/fontawesome.css" /> -->
+        <css src="css/fontawesome.css" rel="stylesheet" type="text/css"/>
+        <css src="css/all.min.css" rel="stylesheet" type="text/css"/>
+   
+
+        <!-- This will create a tag like '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">' -->
+        <meta name="x_ua_compatible" content="IE=edge,chrome=1"/>
+        <!-- This will create a tag like '<meta property="og:type" content="article"/>'' -->
+        <meta name="og:type" content="article"/>
+        <!-- This will create a tag like '<meta charset="UTF-8">' -->
+        <meta name="charset" content="UTF-8"/>
+        <!-- This will create a tag like '<meta http-equiv="Content-Type" content="content-type-value"/>' -->
+        <meta name="content_type" content="content-type-value"/>
+        <!-- This tag will not render (see \Magento\Framework\View\Page\Config\Renderer for details) -->
+        <meta name="media_type" content="any-value"/>
+        <!-- This will create a tag like '<meta name="my_custom_type" content="my_custom_value"/>' -->
+        <meta name="my_custom_type" content="my_custom_value"/>
+    </head>
+
+</page>
