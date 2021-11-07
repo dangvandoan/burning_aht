@@ -13,6 +13,9 @@
         <css src="css/fontawesome.css" rel="stylesheet" type="text/css"/>
         <css src="css/all.min.css" rel="stylesheet" type="text/css"/>
         <script src="js/banner.js"/>
+        <script src="js/product.js"/>
+        <script src="js/reasontobuy.js"/>
+        
    
 
         <!-- This will create a tag like '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">' -->

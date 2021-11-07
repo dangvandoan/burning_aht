@@ -1,23 +1,25 @@
 & when (@media-common =true) {
+
   /* #region common */
   .main-banner {
-    
-    margin: 0 -100px;
     color: @color-white;
+
     .bg-banner {
       position: relative;
     }
+
     .main-banner-content {
       position: absolute;
       z-index: 1;
       top: 50%;
-     text-align: center;
+      text-align: center;
       transform: translate(20%, -50%);
-   
+
       h2 {
         font-size: 200px;
         font-family: @font-market;
       }
+
       .main-banner-text {
         font-size: 32px;
         line-height: 34px;
@@ -26,6 +28,7 @@
         padding: 50px 0 30px 0;
         filter: drop-shadow(0 0 7.5px rgba(0, 0, 0, 0.5));
       }
+
       .main-banner-btn {
         a {
           color: @color-white;
@@ -41,11 +44,148 @@
     }
   }
 
-  .product-intro-top {
-    .row {
-      .col {
-        width: 45%;
+  .product-intro {
+    margin-top: 23px;
+
+    .product-into-inner {
+      position: relative;
+      color: @color-white;
+
+      img {
+        width: 100%;
       }
+
+      .product-intro-content {
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+
+        .shop-nowtitle {
+          h2 {
+            font-size: 32px;
+            font-weight: 700;
+          }
+        }
+
+        .btn {
+          margin-top: 20px;
+
+          a {
+            text-decoration: none;
+            color: @color-white;
+            padding: 17px 26px;
+            background-color: @color-bg-shop;
+            border: 2px solid @color-white;
+            font-size: 15px;
+            font-family: @font-roboto;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .reasontobuy {
+    // display: flex;
+    background-color: @color-bg-shop;
+    // padding: 15px 54px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 0;
+    // justify-content: space-between;
+
+    a {
+      color: @color-white;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: @color-white;
+      font-weight: 500;
+      font-family: @font-roboto;
+      text-align: center;
+
+      &:not(:last-child) {
+        border-right: 1px solid #47474b;
+      }
+    }
+  }
+
+  .banner {
+    .row.style-guide {
+      margin-left: -10px;
+      margin-right: -10px;
+
+      .col-4 {
+        width: 100%;
+
+        .banner-inner {
+          background-color: @color-gray-darken0;
+          margin: 0 10px;
+          padding-bottom: 48px;
+          text-align: center;
+
+         
+
+          img {
+            width: 100%;
+          }
+
+          h2 {
+            font-size: 24px;
+            color: @color-black-dark3;
+            font-weight: 400;
+          }
+
+          .banner-text {
+            width: 70%;
+            font-size: 14px;
+            line-height: 20px;
+            color: @color-gray20;
+            font-weight: 400;
+            margin: 9px auto 21px auto;
+          }
+
+          .banner-shopnow {
+            margin-top: 13px;
+
+            a {
+              font-size: 13px;
+              color: @color-bg-shop;
+              font-weight: 700;
+              padding: 13px 17px;
+
+              border: 2px solid @color-bg-shop;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .product {
+    margin-top: 50px;
+
+    img {
+      width: 100%;
+    }
+
+    .block-title {
+      text-align: center;
+
+      strong {
+        font-size: 32px;
+        color: @color-black-dark3;
+        font-weight: 400;
+        font-family: @font-lora;
+      }
+    }
+
+    .product-new {
+      margin-top: 30px;
     }
   }
 }
@@ -54,20 +194,35 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break)
-  when
-  (@extremum ="max")
-  and
-  (@break =@screen__m) {
+.media-width(@extremum, @break) when (@extremum ="max") and (@break =@screen__m) {
+  .banner {
+    .row.style-guide {
+      display: block;
+    }
+    .banner-inner{
+      &:not(:first-child){
+        margin-top: 10px;
+      }
+    }
+
+   
+  }
+}
+
+@media screen and (max-width: @screen__xs) {
+  .reasontobuy {
+    a {
+      font-size: 11px;
+    }
+  }
 }
 
 //
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break)
-  when
-  (@extremum ="min")
-  and
-  (@break =@screen__m) {
+.media-width(@extremum, @break) when (@extremum ="min") and (@break =@screen__m) {
+  .main-banner {
+    margin: 0 -100px;
+  }
 }

@@ -1,11 +1,9 @@
 require(["jquery", "slick"], function($) {
-    $(".main-banner").slick({
+    $(".pro").slick({
         dots: true,
         infinite: true,
         speed: 300,
-        slidesToShow: 1,
+        slidesToShow: 4,
         slidesToScroll: 1,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
     });
 });
